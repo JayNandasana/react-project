@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, Box } from "@mui/material";
 
 export default function AdminPanel() {
   return (
@@ -10,53 +10,29 @@ export default function AdminPanel() {
         alignItems="center"
         paddingTop="55px"
         height="100vh"
-      >
+      > 
         <Link
           to="/AdminPanel/ButtonCompo"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Card sx={{ minWidth: 275, minHeight: 275, marginRight: 10 }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                Button
-              </Typography>
-            </CardContent>
+          <Card sx={{ minWidth: 200, minHeight: 200, marginRight: 10 , borderRadius:7}}>
+              <img src="/sample/manageBtnCompo.png" alt="templates" />
           </Card>
         </Link>
         <Link
           to="/AdminPanel/CheckboxCompo"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Card sx={{ minWidth: 275, minHeight: 275, marginRight: 10 }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                Checkbox
-              </Typography>
-            </CardContent>
+          <Card sx={{ minWidth: 200, minHeight: 200, marginRight: 10 ,borderRadius:7}}>
+              <img src="/sample/manageCheckboxCompo.png" alt="templates" />
           </Card>
         </Link>
         <Link
           to="/AdminPanel/User"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Card sx={{ minWidth: 275, minHeight: 275 }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                User
-              </Typography>
-            </CardContent>
+          <Card sx={{ minWidth: 200, minHeight: 200 ,borderRadius:7}}>
+              <img src="/sample/manageUser.png" alt="templates" />
           </Card>
         </Link>
       </Box>

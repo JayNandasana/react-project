@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { Button, Box } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Button,
+  Typography,
+  Box
+} from "@mui/material";
 
 export default function Components() {
   return (
@@ -10,16 +18,59 @@ export default function Components() {
       paddingTop="55px"
       height="100vh"
     >
-      <Link to="/Components/buttonCompo" style={{ textDecoration: 'none' }}>
-        <Button variant="contained" sx={{ bgcolor: '#00008b', color: 'white', marginRight: 2 }}>
-          Button
-        </Button>
-      </Link>
-      <Link to="/Components/checkboxCompo" style={{ textDecoration: 'none' }}>
-        <Button variant="contained" sx={{ bgcolor: '#00008b', color: 'white' }}>
-          Checkbox
-        </Button>
-      </Link>
+      
+        <Card sx={{ backgroundColor: "#ffffffc0", width: "320px",marginRight: 10  }}>
+          <CardMedia
+            component="img"
+            height="350"
+            image="./sample/button.png"
+            alt="login"
+          />
+          <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+              Button Components
+            </Typography>
+            <Typography variant="body2" color="text.secondary" gutterBottom>
+              HTML + CSS
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "center" }}>
+            <Button
+              component={Link}
+              to="/Components/ButtonCompo"
+              variant="contained"
+              sx={{ backgroundColor: "#00008b", color: "white",marginBottom:"10px" }}
+            >
+              Explore
+            </Button>
+          </CardActions>
+        </Card>
+        <Card sx={{ backgroundColor: "#ffffffc0", width: "320px" }}>
+          <CardMedia
+            component="img"
+            height="350"
+            image="./sample/checkbox.png"
+            alt="register"
+          />
+          <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+              Checkbox Components
+            </Typography>
+            <Typography variant="body2" color="text.secondary" gutterBottom>
+              HTML + CSS
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "center" }}>
+            <Button
+              component={Link}
+              to="/Components/CheckboxCompo"
+              variant="contained"
+              sx={{ backgroundColor: "#00008b", color: "white",marginBottom:"10px" }}
+            >
+              Explore
+            </Button>
+          </CardActions>
+        </Card>
     </Box>
   );
 }
