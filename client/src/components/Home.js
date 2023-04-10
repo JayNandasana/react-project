@@ -1,7 +1,8 @@
 import React from "react";
-import { Box } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
+import { Card, Box } from "@mui/material";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = React.useState(0);
@@ -19,7 +20,7 @@ export default function Home() {
       );
     }, 5000);
     return () => clearInterval(interval);
-  }, 4000);
+  }, [images.length]);
 
   return (
     <Box sx={{ paddingTop: "55px", position: "relative", height: "100%" }}>
@@ -39,6 +40,29 @@ export default function Home() {
           </div>
         ))}
       </Carousel>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="calc(100vh - 255px);"
+      >
+        <Link
+          to="/Templates"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <Card sx={{ minWidth: 350, minHeight: 80, marginRight: 20, borderRadius:4}}>
+              <img src="/sample/templates.png" alt="templates" />
+          </Card>
+        </Link>
+        <Link
+          to="/Components"
+          style={{ textDecoration: "none", color: "inherit" }}
+        > 
+          <Card sx={{ minWidth: 350, minHeight: 80 ,borderRadius:4}}>
+              <img src="/sample/components.png" alt="components" />
+          </Card>
+        </Link>
+      </Box>
     </Box>
   );
 }

@@ -115,8 +115,7 @@ export default function Login({open,setOpen}) {
         else {
             setSignup({ ...signup, [e.target.name]: e.target.value });
             setError(false);
-        }
-        // here [] use because e is a varible but here e used as a key so []
+        } 
     }
     const signupuser = async () => {
         let response = await authenticateSignup(signup); 

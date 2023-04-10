@@ -15,9 +15,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Login from "./Login";
 import Profile from "./Profile";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-const pages = ["Templates", "Components", "About Us"];
+const pages = ["Templates", "Components"];
 
 export default function Nevbar() {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ export default function Nevbar() {
   };
 
   const handleAdminButtonClick = () => {
-    navigate('/AdminPanel');
+    navigate("/AdminPanel");
   };
 
   return (
